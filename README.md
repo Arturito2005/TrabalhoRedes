@@ -1,0 +1,1 @@
+Este projeto foi realizado como trabalho final da cadeira Redes de Computadores (RC), que consiste com base num ip fornecdio pelo professor criar um plano de endereçamento para uma rede, utilizando o simulador PacketTracer.
