@@ -1,0 +1,71 @@
+Configuração portas serial
+R1-R4
+R1
+Router>EN
+Router#conf t
+Router(config)#int se 0/3/0
+Router(config-if)#ip add 10.85.1.1 255.255.255.252
+Router(config-if)#no shut
+
+R4
+Router>EN
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int se0/3/0
+Router(config-if)#ip add 10.85.1.2 255.255.255.252
+Router(config-if)#no shut
+
+R1-R5
+R1
+Router>EN
+Router#conf t
+Router(config)#int se 0/3/1
+Router(config-if)#ip add 10.85.1.9 255.255.255.252
+Router(config-if)#no shut
+
+R5
+Router>en
+Router#conf t
+Router(config)#int se0/3/1
+Router(config-if)#ip add 10.85.1.10 255.255.255.252
+Router(config-if)#no shut
+
+R4-R2
+R4
+Router>en
+Router#conf t
+Router(config)#int se0/3/1
+Router(config-if)#ip add 10.85.1.6 255.255.255.252
+Router(config-if)#no shut
+
+R2
+Router>EN
+Router#conf t
+Router(config)#int se0/3/1
+Router(config-if)#ip add 10.85.1.5 255.255.255.252
+Router(config-if)#no shut
+
+R5-R3
+R5
+Router>EN
+Router#conf t
+Router(config)#int se0/3/0
+Router(config-if)#ip add 10.85.1.14 255.255.255.252
+Router(config-if)#no shut
+
+R3
+Router>en
+Router#conf t
+Router(config)#int se0/3/0
+Router(config-if)#ip add 10.85.1.13 255.255.255.252
+Router(config-if)#no shut
+
+
+
+
+
+
+
+
+
+

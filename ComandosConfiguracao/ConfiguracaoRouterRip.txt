@@ -1,0 +1,64 @@
+Routers
+
+Router 1
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#redistribute connected
+Router(config-router)#network 10.85.0.192
+Router(config-router)#network 10.85.0.208
+Router(config-router)#network 10.85.0.224
+Router(config-router)#network 10.85.0.240
+Router(config-router)#network 10.85.1.0
+Router(config-router)#network 10.85.1.8
+Router(config-router)#no auto-summary
+Router(config-router)#passive-interface gigabitEthernet 0/0.10
+Router(config-router)#passive-interface gigabitEthernet 0/0.20
+Router(config-router)#passive-interface gigabitEthernet 0/0.30
+Router(config-router)#passive-interface gigabitEthernet 0/0.40
+Router(config-router)#end
+
+Router 2
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#redistribute connected
+Router(config-router)#network 10.85.0.128
+Router(config-router)#network 10.85.0.160
+Router(config-router)#network 10.85.0.4
+Router(config-router)#network 10.85.1.4
+Router(config-router)#no auto-summary
+Router(config-router)#passive-interface gigabitEthernet 0/0.10
+Router(config-router)#passive-interface gigabitEthernet 0/0.40
+Router(config-router)#end
+
+
+Router 3
+
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#redistribute connected
+Router(config-router)#network 10.85.0.0
+Router(config-router)#network 10.85.0.64
+Router(config-router)#network 10.85.1.12
+Router(config-router)#no auto-summary
+Router(config-router)#passive-interface gigabitEthernet 0/0.30
+Router(config-router)#passive-interface gigabitEthernet 0/0.40
+Router(config-router)#end
+
+Router 4
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#redistribute connected
+Router(config-router)#network 10.85.1.0
+Router(config-router)#network 10.85.1.4
+Router(config-router)#no auto-summary
+Router(config-router)#end
+
+Router 5
+
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#redistribute connected
+Router(config-router)#network 10.85.1.12
+Router(config-router)#network 10.85.1.8
+Router(config-router)#no auto-summary
+Router(config-router)#exit

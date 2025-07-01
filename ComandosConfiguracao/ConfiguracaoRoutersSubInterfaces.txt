@@ -1,0 +1,73 @@
+Configruação Router e subInterfaces
+R1
+Router>en 
+Router#conf t
+Router(config)#int gig0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip add 10.85.0.222 255.255.255.240
+Router(config-subif)#exit
+Router(config)#int gig0/0.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip add 10.85.0.238 255.255.255.240
+Router(config-subif)#exit
+Router(config)#int gig0/0.30
+Router(config-subif)#encapsulation dot1Q 30
+Router(config-subif)#ip add 10.85.0.254 255.255.255.240
+Router(config-subif)#exit
+Router(config)#int gig0/0.40
+Router(config-subif)#encapsulation dot1Q 40
+Router(config-subif)#ip add 10.85.0.206 255.255.255.240
+Router(config-subif)#exit
+Router(config)#int gig0/0
+Router(config-if)#no shut
+
+R2
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int gig0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip add 10.85.0.158 255.255.255.224
+Router(config-subif)#exit
+Router(config)#int gig0/0.40
+Router(config-subif)#encapsulation dot1Q 40
+Router(config-subif)#ip add 10.85.0.190 255.255.255.224
+Router(config-subif)#exit
+Router(config)#int gig 0/0
+Router(config-if)#no shut
+
+R3
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int gig0/0.30
+Router(config-subif)#encapsulation dot1Q 30
+Router(config-subif)#ip add 10.85.0.126 255.255.255.192
+Router(config-subif)#exit
+Router(config)#int gig0/0.40
+Router(config-subif)#encapsulation dot1Q 40
+Router(config-subif)#ip add 10.85.0.62 255.255.255.192
+Router(config-subif)#exit
+Router(config)#int gig0/0
+Router(config-if)#no shut
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

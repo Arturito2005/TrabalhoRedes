@@ -1,0 +1,116 @@
+Configuração Switchs
+LAN1
+Switch>en
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#vtp mode transparent
+Setting device to VTP TRANSPARENT mode.
+Switch(config)#vlan 10
+Switch(config-vlan)#name Producao
+Switch(config-vlan)#vlan 20
+Switch(config-vlan)#name Gestao
+Switch(config-vlan)#vlan 30
+Switch(config-vlan)#name Vendas
+Switch(config-vlan)#vlan 40
+Switch(config-vlan)#name Informatica
+Switch(config-vlan)#interface fa0/24
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#interface fa0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#interface fa0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#interface fa0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+Switch(config)#interface fa0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exit
+Switch(config)#interface fa0/5
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config)#interface gig0/1
+Switch(config-if)#switchport mode trunk
+
+
+LAN2
+Switch>enable
+Switch#configure terminal
+Switch(config)#vtp mode transparent
+Switch(config)#vlan 10
+Switch(config-vlan)#name Producao
+Switch(config-vlan)#vlan 40
+Switch(config-vlan)#name Informatica
+Switch(config-vlan)#interface fa0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#interface fa0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#interface fa0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+Switch(config)#interface fa0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+Switch(config)#interface fa0/5
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+Switch(config)#interface gig0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+
+LAN3
+Switch>en
+Switch#conf t
+Switch(config)#vtp mode transparent
+Switch(config)#vlan 30
+Switch(config-vlan)#name Vendas
+Switch(config-vlan)#vlan 40
+Switch(config-vlan)#name Informatica
+Switch(config-vlan)#int fa0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#int fa0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#int fa0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
+Switch(config)#int fa0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
+Switch(config)#int fa0/5
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
+Switch(config)#int gig0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#exit
+
+
+
+
+
+
+
+
+
+
